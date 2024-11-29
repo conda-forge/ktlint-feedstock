@@ -1,5 +1,5 @@
 {% set name = "ktlint" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pinterest/ktlint/archive/{{ version }}.tar.gz
-  sha256: 970dcf90d1ad77f27a9144ed2091f831c91cf93cfde9dc1afde17d1c1f403589
+  sha256: cd36491e70afe25789c16752a2358e504141eea877234bca4a4e14531c5ddb71
 
 build:
   noarch: generic
