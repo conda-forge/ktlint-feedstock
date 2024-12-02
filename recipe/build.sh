@@ -19,6 +19,7 @@ tee ${PREFIX}/bin/ktlint << EOF
 #!/bin/sh
 exec \${JAVA_HOME}/bin/java -jar \${CONDA_PREFIX}/libexec/ktlint/ktlint-cli-all.jar "\$@"
 EOF
+chmod +x ${PREFIX}/bin/ktlint
 
 tee ${PREFIX}/bin/ktlint.cmd << EOF
 call %JAVA_HOME%\bin\java -jar %CONDA_PREFIX%\libexec\ktlint\ktlint-cli-all.jar %*

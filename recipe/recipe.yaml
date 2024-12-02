@@ -1,17 +1,17 @@
-{% set name = "ktlint" %}
-{% set version = "1.4.1" %}
+context:
+  version: 1.4.1
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ktlint
+  version: ${{ version }}
 
 source:
-  url: https://github.com/pinterest/ktlint/archive/{{ version }}.tar.gz
+  url: https://github.com/pinterest/ktlint/archive/${{ version }}.tar.gz
   sha256: cd36491e70afe25789c16752a2358e504141eea877234bca4a4e14531c5ddb71
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   build:
@@ -20,18 +20,18 @@ requirements:
   run:
     - openjdk
 
-test:
-  commands:
-    - ktlint --help
+tests:
+  - script:
+      - ktlint --help
 
 about:
-  home: https://github.com/pinterest/ktlint
   license: MIT
   license_file:
     - LICENSE
     - build/reports/dependency-license/
   summary: An anti-bikeshedding Kotlin linter with built-in formatter
-  dev_url: https://github.com/pinterest/ktlint
+  homepage: https://github.com/pinterest/ktlint
+  repository: https://github.com/pinterest/ktlint
 
 extra:
   recipe-maintainers:
