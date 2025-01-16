@@ -1,5 +1,5 @@
 context:
-  version: 1.4.1
+  version: "1.5.0"
 
 package:
   name: ktlint
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pinterest/ktlint/archive/${{ version }}.tar.gz
-  sha256: cd36491e70afe25789c16752a2358e504141eea877234bca4a4e14531c5ddb71
+  sha256: 3a65cfa2a97e43d3ee98c4c2b4d07244ef3a5f70ae484bb99d6339783fed84a4
 
 build:
   number: 0
