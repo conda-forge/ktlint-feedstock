@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pinterest/ktlint/archive/${{ version }}.tar.gz
-  sha256: fd0d3333133d25d8f1e5e858d2cb34b2c8003f6b92001831d83249e9451cb29e
+  sha256: c7db09e443efbe836f5a0efb8ce33c3100fb450ca1bafa2e9bcd89d8d25e0290
 
 build:
   number: 0
