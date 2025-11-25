@@ -10,9 +10,9 @@ sed -i 's/alias(libs.plugins.kotlin.jvm) apply false/alias(libs.plugins.kotlin.j
 
 # Build with gradle
 # ignore irrelevant error about missing signature for pushing artifacts to a repository - we are only building a JAR
-./gradlew clean shadowJarExecutable || true
+./gradlew clean ktlintCliFiles || true
 cp ktlint-cli/build/libs/ktlint-cli-${PKG_VERSION}-all.jar ${PREFIX}/libexec/${PKG_NAME}/ktlint-cli-all.jar
-./gradlew generateLicenseReport
+./gradlew generateLicenseReport --no-parallel
 
 # Create bash and batch files
 tee ${PREFIX}/bin/ktlint << EOF
